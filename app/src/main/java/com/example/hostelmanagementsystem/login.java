@@ -45,6 +45,7 @@ public class login extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         rootRef = FirebaseDatabase.getInstance().getReference();
         demoRef = rootRef.child("admin");
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,12 +59,12 @@ public class login extends AppCompatActivity {
                 strUsername = strNewUsername.replaceAll("[@.]","");
                 startActivityLogin();
                 if(strNewUsername.isEmpty()){
-                    Toast.makeText(login.this, "Enter Email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login.this, "Enter email", Toast.LENGTH_SHORT).show();
                     nDialog.dismiss();
                     return;
                 }
                 if(strPassword.isEmpty()){
-                    Toast.makeText(login.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login.this, "Enter password", Toast.LENGTH_SHORT).show();
                     nDialog.dismiss();
                     return;
                 }
