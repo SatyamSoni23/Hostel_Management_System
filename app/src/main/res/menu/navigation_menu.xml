@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/allotRoom"
+        android:icon="@drawable/ic_sentiment_satisfied_black_24dp"
+        android:title="Allot Room">
+    </item>
+    <item
+        android:id="@+id/unallotRoom"
+        android:icon="@drawable/ic_sentiment_dissatisfied_black_24dp"
+        android:title="Unallot Room">
+    </item>
+    <item
+        android:id="@+id/mess"
+        android:icon="@drawable/ic_kitchen_black_24dp"
+        android:title="Mess">
+    </item>
+    <item
+        android:id="@+id/gym"
+        android:icon="@drawable/gym"
+        android:title="Gym">
+    </item>
+    <item
+        android:id="@+id/facilities"
+        android:icon="@drawable/facilities"
+        android:title="facilities">
+    </item>
+    <item
+        android:id="@+id/complain"
+        android:icon="@drawable/complain"
+        android:title="Complains">
+    </item>
+    <item
+        android:id="@+id/Logout"
+        android:icon="@drawable/logout"
+        android:title="Logout">
+    </item>
+</menu>

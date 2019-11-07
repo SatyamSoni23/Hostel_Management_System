@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".adminHome"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:id="@+id/dl">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,7 +25,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="6"
+            android:layout_weight="5"
             android:layout_marginHorizontal="20dp">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -39,7 +41,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="4"
+                        android:layout_weight="5"
                         android:background="@drawable/recttrans"
                         android:stateListAnimator="@animator/button_state_list_anim"
                         android:gravity="center"
@@ -55,7 +57,7 @@
                         android:id="@+id/allotedRoom"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="6"
+                        android:layout_weight="5"
                         android:gravity="center"
                         android:text="00"
                         android:textColor="#FFFFFF"
@@ -79,7 +81,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="4"
+                        android:layout_weight="5"
                         android:autoSizeMaxTextSize="22sp"
                         android:autoSizeMinTextSize="10sp"
                         android:autoSizeTextType="uniform"
@@ -96,7 +98,95 @@
                         android:id="@+id/unAllotedRoom"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="6"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="#FFFFFF"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMaxTextSize="40sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:paddingHorizontal="10dp"
+                        android:textStyle="italic"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_marginHorizontal="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="10">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.75"
+                    android:weightSum="10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/recttrans"
+                        android:stateListAnimator="@animator/button_state_list_anim"
+                        android:gravity="center"
+                        android:text="Complains"
+                        android:fontFamily="monospace"
+                        android:textColor="#FFFFFF"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMaxTextSize="22sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:paddingHorizontal="10dp"
+                        android:textStyle="italic"/>
+                    <TextView
+                        android:id="@+id/complains"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="#FFFFFF"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMaxTextSize="40sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:paddingHorizontal="10dp"
+                        android:textStyle="italic"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.75"
+                    android:weightSum="10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:autoSizeMaxTextSize="22sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/recttrans"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:stateListAnimator="@animator/button_state_list_anim"
+                        android:text="Complains\nResolve"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/resolveComplains"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
                         android:gravity="center"
                         android:text="00"
                         android:textColor="#FFFFFF"
@@ -109,4 +199,12 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/navigation_menu">
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

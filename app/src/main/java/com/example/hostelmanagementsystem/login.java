@@ -113,14 +113,7 @@ public class login extends AppCompatActivity {
     }
     public void startActivityLogin(){
         Intent intent = new Intent(this, adminHome.class);
-        File myDir = new File(android.os.Environment.getExternalStorageDirectory().toString(), "E-Receipt");
-        if(myDir.exists()){
-            startActivity(intent);
-        }
-        else{
-            myDir.mkdir();
-            startActivity(intent);
-        }
+        startActivity(intent);
     }
     public void startWrongActivity(){
         Intent intent = new Intent(this, wrg.class);

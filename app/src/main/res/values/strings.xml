@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Hostel Management System</string>
+<string name="app_name">Hostel Management System</string>
+<string name="Open">Hostel Management System</string>
+<string name="Close">Hostel Management System</string>
 </resources>
